@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개하기</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>2020675071 한세윤</h1>
+    <br/></br>
+    <h2></h2>
+    <h2>저는 경성대학교를 다니는 20학번 한세윤입니다.</h2>
+    <script>
+        //document.addEventListener("DOMContentLoaded", function() {
+            const newDiv = document.createElement("div");
+            newDiv.textContent = "현재 리액트에 관한 수업을 듣고 있으며 가장 좋아하는 언어는 파이썬입니다.";
+            newDiv.style.fontSize = "12px";
+            newDiv.style.color = "brown";
+            document.body.appendChild(newDiv);
+            
+            
+            const newImage = document.createElement("img");
+            newImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCFSvITlLKx_aC_ioY4Vtypb-dTqi3FG9Xg&s";
+            newImage.style.width = "150px";
+            newImage.style.height = "150px";
+            document.body.insertBefore(newImage, document.body.firstChild);
+        //});
+    </script>
+</body>
+</html>
