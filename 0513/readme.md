@@ -1,12 +1,8 @@
-# React - Lists & Keys, Forms, Lifting State Up
-
 React를 사용할 때, 사용자 인터페이스에서 배열 데이터를 렌더링하고 사용자 입력을 다루며, 컴포넌트 간 상태를 공유하는 패턴은 매우 중요합니다. 이 문서는 **Lists & Keys**, **Forms**, **Lifting State Up**의 개념과 예제를 정리한 것입니다.
 
 ---
 
-## ✅ Lists & Keys
-
-### 📌 Lists (리스트)
+###  Lists (리스트)
 
 React에서는 배열 데이터를 화면에 출력할 때 `map()` 함수를 사용하여 각 항목을 컴포넌트로 변환합니다.
 
@@ -18,7 +14,7 @@ const userList = users.map((user, index) => (
 ));
 ```
 
-### 📌 Keys (키)
+###  Keys (키)
 
 `key`는 React가 어떤 항목이 변경, 추가 또는 제거되었는지 식별하는 데 사용됩니다. 성능 최적화를 위해 꼭 필요한 요소입니다.
 
@@ -37,11 +33,11 @@ const itemList = items.map(item => (
 
 ---
 
-## ✅ Forms
+## Forms
 
 React에서 폼은 사용자 입력을 관리하고, `onChange`, `onSubmit` 같은 이벤트로 데이터를 처리합니다.
 
-### 📌 기본 구조 및 이벤트 처리
+###  기본 구조 및 이벤트 처리
 
 ```jsx
 import { useState } from 'react';
@@ -67,7 +63,7 @@ function UserForm() {
 }
 ```
 
-### 📌 특징
+###  특징
 
 - **Controlled Component**: 입력 요소의 상태를 React에서 제어합니다.
 - **onChange**로 값 변경 추적, **onSubmit**으로 제출 처리.
@@ -75,11 +71,11 @@ function UserForm() {
 
 ---
 
-## ✅ Lifting State Up
+## Lifting State Up
 
 **상태 끌어올리기(Lifting State Up)**는 여러 컴포넌트가 동일한 데이터를 공유할 수 있도록 상태를 부모 컴포넌트로 이동시키는 패턴입니다.
 
-### 📌 예제
+### 예제
 
 ```jsx
 import { useState } from 'react';
@@ -108,7 +104,7 @@ function ChildComponent({ onMessageChange }) {
 }
 ```
 
-### 📌 흐름 요약
+###  흐름 요약
 
 1. **부모** 컴포넌트에서 상태를 선언.
 2. **상태 변경 함수**를 자식에게 props로 전달.
@@ -117,7 +113,7 @@ function ChildComponent({ onMessageChange }) {
 
 ---
 
-## ✅ Summary
+##  Summary
 
 | 개념 | 설명 |
 |------|------|
@@ -127,12 +123,10 @@ function ChildComponent({ onMessageChange }) {
 
 ---
 
-## ✅ 참고 팁
+##  참고 팁
 
 - 리스트를 다룰 때는 항상 `key` 값을 신중하게 설정하세요.
 - 폼에서 복잡한 입력 처리나 검증이 필요하면 `Formik`이나 `React Hook Form` 같은 라이브러리도 고려할 수 있습니다.
 - 상태 끌어올리기는 간단한 경우에 적합하며, 더 복잡한 상태 관리는 Context API 또는 Redux를 사용할 수 있습니다.
 
 ---
-
-> 작성자: _React 학습 메모_
